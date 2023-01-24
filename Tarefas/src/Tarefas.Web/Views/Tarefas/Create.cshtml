@@ -3,11 +3,15 @@
 <body>
     
 <form asp-action="Create">
-    @Html.DisplayNameFor(model => model.Titulo)
-    <input asp-for="Titulo"/>
-    <br/>
-    @Html.DisplayNameFor(model => model.Descricao)
-    <input asp-for="Descricao"/>
+    <div class="mb-3">
+        @Html.LabelFor(model => model.Titulo, new{@class = "form-label"})
+        @Html.TextBoxFor(model => model.Titulo, new{@class = "form-control"})
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(model => model.Descricao, new{@class = "form-label"})
+        @Html.TextBoxFor(model => model.Descricao, new{@class = "form-control"})
+    </div>
     
     <input type="Submit"/>
 </form>
